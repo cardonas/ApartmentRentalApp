@@ -101,13 +101,17 @@ div h2 + p {
 }
 
 #headers .cell {
-    width: 26.2%;
-    text-align: center;
+    width: 26.7%;
 }
 
 #petheaders .cell {
     width: 23.8%;
 }
+
+#emergencyContactHeaders .cell {
+    width: 28.8%
+}
+
 
 #petFields.row.firstButton {
     visibility: hidden;
@@ -125,6 +129,8 @@ div h2 + p {
     width: 150px;
 }
 
-
+div.cell #emergencyContactRelation {
+    width: 100%;
+}
 
 

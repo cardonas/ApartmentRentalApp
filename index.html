@@ -14,8 +14,9 @@
         <li><a href="#applicantInfo">Applicant Information</a></li>
         <li><a href="#applicantAddress">Applicant Address</a></li>
         <li><a href="#otherOccupants">Other Occupants</a></li>
-        <li><a href="#pets">Pets</a></li>
-        <li><a href="#spouseEmployment">Spouse Employment</a></li>
+        <li><a href="#pet">Pets</a></li>
+        <li><a href="#employment">Employment</a></li>
+        <li><a href="#emergencyContacts">Emergency Contacts</a></li>
         <li><a href="#submit">Submit Application</a></li>
     </ul>
 
@@ -314,14 +315,163 @@
         </div>
     </div>
 
-    <div id="spouseEmployment">
-        test form 4
+    <div id="employment">
+        <div id="employmentForms" class="table">
+            <div class="row appForm">
+                <form id="appEmployment1" class="appAddress appForm table">
+                    <div class="row">
+                        <h2>Employment 1</h2>
+                    </div>
+                    <div class="row">
+                        <div class="cell">
+                            <p>Occupation</p>
+                            <input class="appOccupation" name="appOccupation" id="appOccupation" type="text"
+                                   required title="Please enter an Occupation."/>
+                        </div>
+                        <div class="cell">
+                            <p>Employer/Company</p>
+                            <input id="appEmployer" name="appEmployer" required type="text"
+                                   title="Please enter an Employer"/>
+                        </div>
+                        <div class="cell">
+                            <p>Supervisor Name</p>
+                            <input id="appSupervisorName" name="appSupervisorName" type="text" class="required"
+                                   title="Please enter the Supervisor Name"/>
+                        </div>
+                        <div class="cell">
+                            <p>Monthly Salary</p>
+                            <input id="appMonthlySalary" name="appMonthlySalary" type="text" required
+                                   title="Please enter the monthly salary">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="dateRange row">
+                        <div class="cell">
+                            <p>Start Date</p>
+                            <input id="startDate" class="date" name="startDate" type="text" required
+                                   title="Please enter you started the job.">
+                        </div>
+                        <div class="cell">
+                            <p>End Date</p>
+                            <input id="endDate" class="date" name="endDate" type="text" required
+                                   title="Please enter the date you ended your job.">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row appForm appAddress">
+                <form id="appEmployment2" class="appAddress appForm table">
+                    <div class="row">
+                        <h2>Employment 2</h2>
+                    </div>
+                    <div class="row">
+                        <div class="cell">
+                            <p>Occupation</p>
+                            <input class="appOccupation" name="appOccupation2" id="appOccupation2" type="text"
+                                   required title="Please enter an Occupation."/>
+                        </div>
+                        <div class="cell">
+                            <p>Employer/Company</p>
+                            <input id="appEmployer2" name="appEmployer2" required type="text"
+                                   title="Please enter an Employer"/>
+                        </div>
+                        <div class="cell">
+                            <p>Supervisor Name</p>
+                            <input id="appSupervisorName2" name="appSupervisorName2" type="text" class="required"
+                                   title="Please enter the Supervisor Name"/>
+                        </div>
+                        <div class="cell">
+                            <p>Monthly Salary</p>
+                            <input id="appMonthlySalary2" name="appMonthlySalary2" type="text" required
+                                   title="Please enter the monthly salary">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="dateRange row">
+                        <div class="cell">
+                            <p>Start Date</p>
+                            <input id="startDate2" class="date" name="startDate2" type="text" required
+                                   title="Please enter you started the job.">
+                        </div>
+                        <div class="cell">
+                            <p>End Date</p>
+                            <input id="endDate2" class="date" name="endDate2" type="text" required
+                                   title="Please enter the date you ended your job.">
+                        </div>
+                    </div>
+                </form>
+                <br>
+                <input type="button" value="Submit" id="appEmploymentSubmit"/>
+            </div>
 
-        <form id="testForm4">
-            <input type="text" required title="Enter something"/><br/>
-            <input type="button" value="Submit" id="tab4submit"/>
-        </form>
+        </div>
     </div>
+
+    <div id="emergencyContacts">
+        <div id="emergencyContactsForms" class="table">
+            <div class="row">
+                <h2>Emergency Contacts</h2>
+            </div>
+            <div class="row appForm">
+                <form id="emergencyContact" class="appForm table">
+                    <div class="table">
+                        <div id="emergencyContactHeaders" class="row first">
+                            <div class="cell">
+                                <p>Contact's Name</p>
+                            </div>
+                            <div class="cell">
+                                <p>Address</p>
+                            </div>
+                            <div class="cell phoneNumber">
+                                <p>Phone</p>
+                            </div>
+                            <div class="cell">
+                                <p>Relationship</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="emergencyContactDiv">
+                        <div id="emergencyContactFields" class="table">
+                            <div class=" row ">
+                                <div class="cell">
+                                    <input class="emergencyContactName1" name="emergencyContactName1"
+                                           id="emergencyContactFirstName1" required
+                                           type="text" title="Please enter the First Name."/>
+                                </div>
+                                <div class="cell">
+                                    <input id="emergencyContactAddress1" class="emergencyContactAddress" name="emergencyContactAddress1" type="text"
+                                          required title="Please enter the last name"/>
+                                </div>
+                                <div class="cell">
+                                    <input id="emergencyContactPhoneNumber1" class="phoneNumber" name="emergencyContactPhoneNumber1" type="text"
+                                           title="Please enter a phone number"/>
+                                </div>
+                                <div class="cell">
+                                    <select id="emergencyContactRelation" name="emergencyContactRelation"
+                                            title="Please enter a state">
+                                        <option value="Mother">Mother</option>
+                                        <option value="Father">Father</option>
+                                        <option value="Brother">Brother</option>
+                                        <option value="Sister">Sister</option>
+                                        <option value="Boyfriend">BoyFriend</option>
+                                        <option value="GirlFriend">GirlFriend</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <br>
+            <input type="button" value="Submit" id="appOccupantsSubmit"/>
+        </div>
+    </div>
+
+
     <div id="submit">
         test form 5
 

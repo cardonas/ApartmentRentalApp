@@ -27,14 +27,15 @@ $(document).ready(function () {
     $("#appInfo").validate();
     $("#appAddress").validate();
     $("#otherOccupants").validate();
-    $("#testForm3").validate();
+    $("#pets").validate();
+    $("#emergencyContacts").validate();
     $("#testForm4").validate();
 
     $("#tabs").tabs({
 
-        disabled: [0, 1, 3, 4, 5],
-        active: 2,
-        heightStyle: "content"
+        disabled: [0, 1, 2, 3, 4, 6],
+        active: 5,
+        heightStyle: "fill"
 
     });
 
@@ -44,7 +45,7 @@ $(document).ready(function () {
 
         if ($("#appInfo").valid()) {
             $("#tabs").tabs({
-                disabled: [0, 2, 3, 4, 5],
+                disabled: [0, 2, 3, 4, 5, 6],
                 active: 1
             });
         }
@@ -80,7 +81,7 @@ $(document).ready(function () {
 
         if ($("#appCurrentAddress").valid() && $('#appPreviousAddress').valid()) {
             $("#tabs").tabs({
-                disabled: [0, 1, 3, 4, 5],
+                disabled: [0, 1, 3, 4, 5, 6],
                 active: 2
             });
         }
@@ -93,9 +94,9 @@ $(document).ready(function () {
     $("#addOccupant").click(function () {
         $('#deleteOccupant').show();
         $('#occupantFields input.date').removeAttr('id').datepicker("destroy");
+        $('#occupantUnder18').removeAttr('id');
         $('#occupantFields').clone(true).attr('id', 'occupantFields')
-            .find('input:text').val('').end().appendTo("#newOccupant");
-
+            .find('input:text').val('').find('input:checkbox').removeAttr('checked').end().appendTo("#newOccupant");
         $('#occupantFields input.date').datepicker({
             changeMonth: true,
             changeYear: true,
@@ -103,6 +104,7 @@ $(document).ready(function () {
             maxDate: 0,
             dateFormat: 'mm/dd/y'
         });
+        $('#occupantUnder18').prop('checked', false);
         $('#deleteOccupant').hide().on('click', function (e) {
             e.preventDefault();
         });
@@ -119,10 +121,9 @@ $(document).ready(function () {
     $("#appOccupantsSubmit").click(function () {
 
         $("#tabs").tabs({
-            disabled: [0, 1, 2, 4, 5],
+            disabled: [0, 1, 2, 4, 5, 6],
             active: 3
         });
-
 
     });
 
@@ -155,14 +156,24 @@ $(document).ready(function () {
     $("#appPetsSubmit").button();
     $("#appPetsSubmit").click(function () {
 
-        if ($("#pet").valid()) {
-            $("#tabs").tabs({
-                disabled: [0, 1, 2, 3, 5],
-                active: 4
-            });
-        }
+        $("#tabs").tabs({
+            disabled: [0, 1, 2, 3, 5, 6],
+            active: 4
+        });
 
     });
+
+    $("#appEmploymentSubmit").button();
+    $("#appEmploymentSubmit").click(function () {
+
+        if ($('#appEmployment1').valid() && $('#appEmployment2').valid()) {
+            $("#tabs").tabs({
+                disabled: [0, 1, 2, 3, 4, 6],
+                active: 5
+            });
+        }
+    });
+
 
     // $("#tab4submit").button();
     // $("#tab4submit").click(function(){
