@@ -1,0 +1,130 @@
+* {
+    outline: none;
+
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.error {
+    padding-left: .5em;
+}
+
+input.error {
+    background-color: lightpink;
+}
+
+input[type=text] {
+    width: 87%;
+}
+
+.table {
+    display: table;
+    width: 100%;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+}
+
+.cell p {
+    margin-bottom: 5px;
+}
+
+#appMiddleInitial {
+    width: 1.5em;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    font-size: small;
+}
+
+#movingDates {
+    width: 50%;
+}
+
+#movingDates > p {
+    font-weight: bold;
+}
+
+.dateRange p {
+    margin-top: auto;
+}
+
+div h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+form > p {
+    font-weight: bold;
+}
+
+form {
+    margin: 10px;
+}
+
+#deleteAddress {
+    float: right;
+}
+
+.appForm {
+    border: black 2px solid;
+    padding: 10px 20px 30px 20px;
+    width: 94%;
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+
+.appForm input {
+    padding: 0 .5em;
+}
+
+.caption {
+    margin: 0;
+    font-weight: bold;
+}
+
+div h2 + p {
+    margin-top: 0;
+}
+
+#occupants {
+    width: 93%;
+}
+
+#headers .cell {
+    width: 26.2%;
+    text-align: center;
+}
+
+#petheaders .cell {
+    width: 23.8%;
+}
+
+#petFields.row.firstButton {
+    visibility: hidden;
+}
+
+.cell.hiddenButton {
+    width: 70px;
+}
+
+#deletePet {
+    float: left;
+}
+
+.cell.occupantHiddenButton {
+    width: 150px;
+}
+
+
+
+

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/jquery-ui.css" rel="stylesheet"/>
+    <link href="css/site.css" rel="stylesheet"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/clSideFinalProject.js"></script>
+</head>
+<body>
+<div id="tabs">
+    <ul>
+        <li><a href="#applicantInfo">Applicant Information</a></li>
+        <li><a href="#applicantAddress">Applicant Address</a></li>
+        <li><a href="#otherOccupants">Other Occupants</a></li>
+        <li><a href="#pets">Pets</a></li>
+        <li><a href="#spouseEmployment">Spouse Employment</a></li>
+        <li><a href="#submit">Submit Application</a></li>
+    </ul>
+
+    <div id="applicantInfo">
+        <div class="table">
+            <div class="row">
+                <h2>Applicant Information</h2>
+            </div>
+            <div class="appInfo appForm row">
+                <form id="appInfo" class="table appForm">
+                    <div class="row">
+                        <div class="cell">
+                            <p>First Name</p>
+                            <input class="appFirstName" name="appFirstName" id="appFirstName" type="text" required
+                                   title="Please enter your first name."/>
+                        </div>
+                        <div class="cell">
+                            <p>Last Name</p>
+                            <input id="appLastName" name="appLastName" type="text" class="required"
+                                   title="Please enter your last name"/>
+                        </div>
+                        <div class="cell">
+                            <p>Phone Number</p>
+                            <input id="appPhoneNumber" name="appPhoneNumber" type="text" required
+                                   title="Please enter your phone number"/>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="cell">
+                            <p>Date of Birth</p>
+                            <input class="date" name="appDOB" type="text" required
+                                   title="Please enter your Date of Birth"/>
+                        </div>
+                        <div class="cell">
+                            <p>Drivers License #</p>
+                            <input id="appDriversLicense" name="appDriversLicense" type="text" required
+                                   title="Please enter your Driver's License"/>
+                        </div>
+                        <div class="cell">
+                            <p>Social Security #</p>
+                            <input id="appSS#" name="appSS#" type="text" required
+                                   title="Please enter your Social Security"/>
+                        </div>
+                    </div>
+                    <div class="row" id="buttonHolder">
+                        <br>
+                    </div>
+                </form>
+                <br/>
+                <input type="button" value="Submit" id="appInfoSubmit"/>
+            </div>
+        </div>
+    </div>
+
+    <div id="applicantAddress">
+        <div id="addressForms" class="table">
+            <div class="row appForm appAddress">
+                <form id="appCurrentAddress" class="appAddress appForm table">
+                    <div class="row">
+                        <h2>Current Address</h2>
+                    </div>
+                    <div class="row">
+                        <div class="cell">
+                            <p>Street Address</p>
+                            <input class="appStreetAddress" name="appStreetAddress" id="appStreetAddress" type="text"
+                                   required title="Please enter a street address."/>
+                        </div>
+                        <div class="cell">
+                            <p>City</p>
+                            <input id="appCurrentCity" name="appCurrentCity" required type="text"
+                                   title="Please enter a city"/>
+                        </div>
+                        <div class="cell">
+                            <p>State</p>
+                            <input id="appCurrentState" name="appCurrentState" type="text" class="required"
+                                   title="Please enter a state"/>
+                        </div>
+                        <div class="cell">
+                            <p>Zipcode</p>
+                            <input id="appCurrentZipcode" name="appCurrentZipcode" type="text" required
+                                   title="Please enter a zipcode">
+                        </div>
+                    </div>
+                    <br>
+                    <p>Move-in/Move-out Date</p>
+                    <div class="dateRange row">
+                        <div class="cell">
+                            <p>From</p>
+                            <input id="moveInDate" class="date" name="moveIn" type="text" required
+                                   title="Please enter the date your moved in.">
+                        </div>
+                        <div class="cell">
+                            <p>To</p>
+                            <input id="moveOutDate" class="date" name="moveOut" type="text" required
+                                   title="Please enter the date your moved out.">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row appForm appAddress">
+                <form id="appPreviousAddress" class="appAddress appForm table">
+                    <div class="row">
+                        <h2>Previous Address</h2>
+                    </div>
+                    <div class="row">
+
+                        <div class="cell">
+                            <p>Street Address</p>
+                            <input class="appStreetAddress" name="appPreviousStreetAddress"
+                                   id="appPreviousStreetAddress" type="text" required
+                                   title="Please enter a street address."/>
+                        </div>
+                        <div class="cell">
+                            <p>City</p>
+                            <input id="appPreviousCity" name="appPreviousCity" required title="Please enter a city"/>
+                        </div>
+                        <div class="cell">
+                            <p>State</p>
+                            <input id="appPreviousState" name="appPreviousState" type="text" class="required"
+                                   title="Please enter a state"/>
+                        </div>
+                        <div class="cell">
+                            <p>Zipcode</p>
+                            <input id="appPreviousZipcode" name="appPreviousZipcode" type="text" required
+                                   title="Please enter a zipcode"/>
+                        </div>
+                    </div>
+                    <br>
+                    <p>Move-in/Move-out Date</p>
+                    <div class="dateRange row">
+                        <div class="cell">
+                            <p>From</p>
+                            <input id="previousMoveInDate" class="date" name="previousMoveIn" type="text" required
+                                   title="Please enter the dates your moved in and out of the address.">
+                        </div>
+                        <div class="dateRange cell">
+                            <p>To</p>
+                            <input id="previousMoveOutDate" class="date" name="previousMoveOut" type="text" required
+                                   title="Please enter the dates your moved in and out of the address.">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="cell">
+                            <input type="button" value="Add another address" id="addAnotherAddress"/>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell">
+                            <input type="button" value="Delete Address" class="hidden-button" id="deleteAddress"/>
+                        </div>
+                    </div>
+                </form>
+                <br>
+                <input type="button" value="Submit" id="appAddressSubmit"/>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="otherOccupants">
+        <div id="occupantForms" class="table">
+            <div class="row">
+                <h2>Additional Occupants</h2>
+                <p>( If no other occupants press "Submit" )</p>
+            </div>
+            <div class="row appForm">
+                <form id="occupants" class="appForm table">
+                    <div class="table">
+                        <div id="headers" class="row first">
+                            <div class="cell">
+                                <p>First Name</p>
+                            </div>
+                            <div class="cell">
+                                <p>Last Name</p>
+                            </div>
+                            <div class="cell">
+                                <p>Date of Birth</p>
+                            </div>
+                            <div class="cell button-width">
+                            </div>
+                            <div class="cell button-width">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="newOccupant">
+                        <div id="occupantFields" class="table">
+                            <div id="firstRow" class=" row ">
+                                <div class="cell">
+                                    <input class="occupant1FirstName" name="occupant1FirstName" id="occupant1FirstName"
+                                           type="text" title="Please enter a street address."/>
+                                </div>
+                                <div class="cell">
+                                    <input id="occupant1LastName" name="occupant1LastName" type="text"
+                                           title="Please enter a city"/>
+                                </div>
+                                <div class="cell">
+                                    <input id="occupant1DOB" name="occupant1DOB" type="text" class="date"
+                                           title="Please enter a state"/>
+                                </div>
+                                <div class="cell">
+                                    <input id="occupantUnder18" name="occupantUnder18" type="checkbox" value="Under 18"
+                                           title="Please enter a state">Under 18<br>
+                                </div>
+                                <div class="cell occupantHiddenButton">
+                                    <input type="button" id="deleteOccupant" value="delete" class="hidden-button"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell ">
+                            <input type="button" value="Add another occupant" class="addAnotherOccupant"
+                                   id="addOccupant"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <br>
+            <input type="button" value="Submit" id="appOccupantsSubmit"/>
+        </div>
+    </div>
+
+    <div id="pet">
+        <div id="petsForms" class="table">
+            <div class="row">
+                <h2>Pets</h2>
+                <p>( If no pets - press "Submit" )</p>
+            </div>
+            <div class="row appForm">
+                <form id="pets" class="appForm table">
+                    <div class="table">
+                        <div id="petheaders" class="row first">
+                            <div class="cell">
+                                <p>PetName</p>
+                            </div>
+                            <div class="cell">
+                                <p>Breed</p>
+                            </div>
+                            <div class="cell">
+                                <p>Last Vaccine Date</p>
+                            </div>
+                            <div class="cell button-width">
+                            </div>
+                            <div class="cell button-width">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="newPet">
+                        <div id="petFields" class="table">
+                            <div class="row">
+                                <div class="cell">
+                                    <input class="petName" name="petName" id="petName"
+                                           type="text" title="Please enter the name of you pet."/>
+                                </div>
+                                <div class="cell">
+                                    <input id="breed" name="breed" type="text" class="required"
+                                           title="Please enter please enter a breed">
+                                </div>
+                                <div class="cell">
+                                    <input id="lastVaccineDate" name="lastVaccineDate" type="text" class="date"
+                                           title="Please enter when you pet was last vaccinated."/>
+                                </div>
+                                <div class="cell">
+                                    <input id="isCat" name="isCat" type="checkbox"/>Cat<br>
+                                </div>
+                                <div class="cell">
+                                    <input id="spayedOrNeutered" name="occupantUnder18" type="checkbox" value="Under 18"
+                                           title="Please enter a state">Is Spayed/neutered<br>
+                                </div>
+                                <div class="cell hiddenButton">
+                                    <input type="button" id="deletePet" value="delete"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">
+                            <input type="button" value="Add Another Pet" class="addAnotherPet"
+                                   id="addPet"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <br>
+            <input type="button" value="Submit" id="appPetsSubmit"/>
+        </div>
+    </div>
+
+    <div id="spouseEmployment">
+        test form 4
+
+        <form id="testForm4">
+            <input type="text" required title="Enter something"/><br/>
+            <input type="button" value="Submit" id="tab4submit"/>
+        </form>
+    </div>
+    <div id="submit">
+        test form 5
+
+        <form id="testForm5">
+            <input type="text" required title="Enter something"/><br/>
+            <input type="button" value="Submit" id="tab5submit"/>
+        </form>
+    </div>
+</div>
+
+
+<div id="confirm">
+    <h3>Are you sure?</h3>
+    <p>By submitting this form, you are certifying that the information you provided is true and complete. </p>
+</div>
+
+
+</body>
+</html>
