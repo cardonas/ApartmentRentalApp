@@ -33,8 +33,8 @@ $(document).ready(function () {
 
     $("#tabs").tabs({
 
-        disabled: [0, 1, 2, 3, 4, 6],
-        active: 5,
+        disabled: [0, 1, 2, 3, 4, 5, 6, 8],
+        active: 7,
         heightStyle: "fill"
 
     });
@@ -45,7 +45,7 @@ $(document).ready(function () {
 
         if ($("#appInfo").valid()) {
             $("#tabs").tabs({
-                disabled: [0, 2, 3, 4, 5, 6],
+                disabled: [0, 2, 3, 4, 5, 6, 7, 8],
                 active: 1
             });
         }
@@ -81,7 +81,7 @@ $(document).ready(function () {
 
         if ($("#appCurrentAddress").valid() && $('#appPreviousAddress').valid()) {
             $("#tabs").tabs({
-                disabled: [0, 1, 3, 4, 5, 6],
+                disabled: [0, 1, 3, 4, 5, 6, 7, 8],
                 active: 2
             });
         }
@@ -121,7 +121,7 @@ $(document).ready(function () {
     $("#appOccupantsSubmit").click(function () {
 
         $("#tabs").tabs({
-            disabled: [0, 1, 2, 4, 5, 6],
+            disabled: [0, 1, 2, 4, 5, 6, 7, 8],
             active: 3
         });
 
@@ -157,7 +157,7 @@ $(document).ready(function () {
     $("#appPetsSubmit").click(function () {
 
         $("#tabs").tabs({
-            disabled: [0, 1, 2, 3, 5, 6],
+            disabled: [0, 1, 2, 3, 5, 6, 7, 8],
             active: 4
         });
 
@@ -168,12 +168,99 @@ $(document).ready(function () {
 
         if ($('#appEmployment1').valid() && $('#appEmployment2').valid()) {
             $("#tabs").tabs({
-                disabled: [0, 1, 2, 3, 4, 6],
+                disabled: [0, 1, 2, 3, 4, 6, 7, 8],
                 active: 5
             });
         }
     });
 
+
+    $("#appEmerContactSubmit").button();
+    $("#appEmerContactSubmit").click(function () {
+
+        if ($('#emergencyContact').valid()) {
+            $("#tabs").tabs({
+                disabled: [0, 1, 2, 3, 4, 5, 7, 8],
+                active: 6
+            });
+        }
+    });
+
+    $("#appReferenceSubmit").button();
+    $("#appReferenceSubmit").click(function () {
+
+        if ($('#references').valid()) {
+            $("#tabs").tabs({
+                disabled: [0, 1, 2, 3, 4, 5, 6, 8],
+                active: 7
+            });
+        }
+    });
+
+    $("#explain1").hide();
+    $("#explain2").hide();
+    $("#explain3").hide();
+    $("#explain4").hide();
+
+
+    $("#bankruptcyYes").change(
+        function () {
+            $("#explain1").show();
+        }
+    );
+
+    $("#bankruptcyNO").change(
+        function () {
+            $("#explain1").hide();
+        }
+    );
+
+    $("#refuseRent1").change(
+        function () {
+            $("#explain2").show();
+        }
+    );
+
+    $("#refuseRent2").change(
+        function () {
+            $("#explain2").hide();
+        }
+    );
+
+    $("#evictedYes").change(
+        function () {
+            $("#explain3").show();
+        }
+    );
+
+    $("#evictedNo").change(
+        function () {
+            $("#explain3").hide();
+        }
+    );
+
+    $("#crimeYes").change(
+        function () {
+            $("#explain4").show();
+        }
+    );
+
+    $("#crimeNo").change(
+        function () {
+            $("#explain4").hide();
+        }
+    );
+
+    $("#appBackgroundSubmit").button();
+    $("#appBackgroundSubmit").click(function () {
+
+        if ($('#backgroundInfo').valid()) {
+            $("#tabs").tabs({
+                disabled: [0, 1, 2, 3, 4, 5, 6, 7],
+                active: 8
+            });
+        }
+    });
 
     // $("#tab4submit").button();
     // $("#tab4submit").click(function(){

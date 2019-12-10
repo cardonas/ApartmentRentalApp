@@ -17,6 +17,8 @@
         <li><a href="#pet">Pets</a></li>
         <li><a href="#employment">Employment</a></li>
         <li><a href="#emergencyContacts">Emergency Contacts</a></li>
+        <li><a href="#personalReferences">References</a></li>
+        <li><a href="#backgroundInformation">Background Info</a></li>
         <li><a href="#submit">Submit Application</a></li>
     </ul>
 
@@ -440,15 +442,15 @@
                                 </div>
                                 <div class="cell">
                                     <input id="emergencyContactAddress1" class="emergencyContactAddress" name="emergencyContactAddress1" type="text"
-                                          required title="Please enter the last name"/>
+                                           title="Please enter the last name"/>
                                 </div>
                                 <div class="cell">
                                     <input id="emergencyContactPhoneNumber1" class="phoneNumber" name="emergencyContactPhoneNumber1" type="text"
-                                           title="Please enter a phone number"/>
+                                         required title="Please enter a phone number"/>
                                 </div>
                                 <div class="cell">
-                                    <select id="emergencyContactRelation" name="emergencyContactRelation"
-                                            title="Please enter a state">
+                                    <select id="emergencyContactRelation1" name="emergencyContactRelation1" required
+                                            title="Please enter your relationship">
                                         <option value="Mother">Mother</option>
                                         <option value="Father">Father</option>
                                         <option value="Brother">Brother</option>
@@ -460,6 +462,182 @@
                             </div>
                             <div class="row">
                                 <br/>
+                            </div> <div class=" row ">
+                            <div class="cell">
+                                <input class="emergencyContactName2" name="emergencyContactName2"
+                                       id="emergencyContactFirstName2" required
+                                       type="text" title="Please enter the First Name."/>
+                            </div>
+                            <div class="cell">
+                                <input id="emergencyContactAddress2" class="emergencyContactAddress" name="emergencyContactAddress2" type="text"
+                                        title="Please enter the last name"/>
+                            </div>
+                            <div class="cell">
+                                <input id="emergencyContactPhoneNumber2" class="phoneNumber" name="emergencyContactPhoneNumber2" type="text"
+                                       required title="Please enter a phone number"/>
+                            </div>
+                            <div class="cell">
+                                <select id="emergencyContactRelation2" name="emergencyContactRelation2" required
+                                        title="Please enter your Relationship">
+                                    <option value="Mother">Mother</option>
+                                    <option value="Father">Father</option>
+                                    <option value="Brother">Brother</option>
+                                    <option value="Sister">Sister</option>
+                                    <option value="Boyfriend">BoyFriend</option>
+                                    <option value="GirlFriend">GirlFriend</option>
+                                </select>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <br>
+            <input type="button" value="Submit" id="appEmerContactSubmit"/>
+        </div>
+    </div>
+
+    <div id="personalReferences">
+        <div id="personalReferencesForms" class="table">
+            <div class="row">
+                <h2>Personal References</h2>
+            </div>
+            <div class="row appForm">
+                <form id="references" class="appForm table">
+                    <div class="table">
+                        <div id="referencesHeaders" class="row first">
+                            <div class="cell">
+                                <p>Name</p>
+                            </div>
+                            <div class="cell">
+                                <p>Address</p>
+                            </div>
+                            <div class="cell phoneNumber">
+                                <p>Phone</p>
+                            </div>
+                            <div class="cell">
+                                <p>Relationship</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="referencesDiv">
+                        <div id="referencesFields" class="table">
+                            <div class=" row ">
+                                <div class="cell">
+                                    <input class="referenceName1" name="referenceName1"
+                                           id="referenceFirstName1" required
+                                           type="text" title="Please enter the First Name."/>
+                                </div>
+                                <div class="cell">
+                                    <input id="referenceAddress1" class="referenceAddress" name="referenceAddress1" type="text"
+                                           title="Please enter the last name"/>
+                                </div>
+                                <div class="cell">
+                                    <input id="referencePhoneNumber1" class="phoneNumber" name="referencePhoneNumber1" type="text"
+                                          required title="Please enter a phone number"/>
+                                </div>
+                                <div class="cell">
+                                    <select id="referenceRelation1" name="referenceRelation1" required
+                                            title="Please enter your relationship">
+                                        <option value="Mother">Mother</option>
+                                        <option value="Father">Father</option>
+                                        <option value="Brother">Brother</option>
+                                        <option value="Sister">Sister</option>
+                                        <option value="Boyfriend">BoyFriend</option>
+                                        <option value="GirlFriend">GirlFriend</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <br/>
+                            </div> <div class=" row ">
+                            <div class="cell">
+                                <input class="referenceName2" name="referenceName2"
+                                       id="referenceFirstName2" required
+                                       type="text" title="Please enter the First Name."/>
+                            </div>
+                            <div class="cell">
+                                <input id="referenceAddress2" class="referenceAddress" name="referenceAddress2" type="text"
+                                       title="Please enter the last name"/>
+                            </div>
+                            <div class="cell">
+                                <input id="referencePhoneNumber2" class="phoneNumber" name="referencePhoneNumber2" type="text"
+                                      required title="Please enter a phone number"/>
+                            </div>
+                            <div class="cell">
+                                <select id="referenceRelation2" name="referenceRelation2" required
+                                        title="Please enter your Relationship">
+                                    <option value="Mother">Mother</option>
+                                    <option value="Father">Father</option>
+                                    <option value="Brother">Brother</option>
+                                    <option value="Sister">Sister</option>
+                                    <option value="Boyfriend">BoyFriend</option>
+                                    <option value="GirlFriend">GirlFriend</option>
+                                </select>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <br>
+            <input type="button" value="Submit" id="appReferenceSubmit"/>
+        </div>
+    </div>
+
+    <div id="backgroundInformation">
+        <div id="backgroundInformationForms" class="table">
+            <div class="row">
+                <h2>Background Information</h2>
+            </div>
+            <div class="row appForm">
+                <form id="backgroundInfo" class="appForm table">
+                    <div class="row">
+                        <h4>Have You Ever:</h4>
+                        <div class="questions row">
+                            <div class="cell">
+                                <p>Filed For bankruptcy?</p>
+                                <input type="radio" id="bankruptcyYes" name="bankruptcy" required>Yes
+                                <input type="radio" id="bankruptcyNO" name="bankruptcy" required>No
+                            </div>
+                            <div id="explain1" class="cell">
+                                <p>Please explain</p>
+                                <input type="text" required class="hidden">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">
+                                <p>Willfully or Intentionally refused to pay rent when due?</p>
+                                <input type="radio" required id="refuseRent1" name="refusedToPayRent">Yes
+                                <input type="radio" required id="refuseRent2" name="refusedToPayRent">No
+                            </div>
+                            <div id="explain2" class="cell">
+                                <p>Please explain</p>
+                                <input type="text" required class="hidden">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">
+                                <p>Been evicted from a tenancy or left owing money?</p>
+                                <input type="radio" class="radio" required id="evictedYes" name="evicted">Yes
+                                <input type="radio" class="radio" required id="evictedNo" name="evicted">No
+                            </div>
+                            <div id="explain3" class="cell">
+                                <p>Please explain</p>
+                                <input type="text" required class="hidden">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">
+                                <p>Been convicted of a crime?</p>
+                                <input type="radio" required id="crimeYes" name="convicted">Yes
+                                <input type="radio" required id="crimeNo" name="convicted">No
+                            </div>
+                            <div id="explain4" class="cell">
+                                <p>Please explain</p>
+                                <input type="text" required class="hidden">
                             </div>
                         </div>
                     </div>
@@ -467,10 +645,9 @@
             </div>
 
             <br>
-            <input type="button" value="Submit" id="appOccupantsSubmit"/>
+            <input type="button" value="Submit" id="appBackgroundSubmit"/>
         </div>
     </div>
-
 
     <div id="submit">
         test form 5

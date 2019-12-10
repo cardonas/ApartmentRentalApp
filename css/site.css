@@ -112,6 +112,10 @@ div h2 + p {
     width: 28.8%
 }
 
+#referencesHeaders .cell {
+    width: 28.8%;
+}
+
 
 #petFields.row.firstButton {
     visibility: hidden;
@@ -133,4 +137,11 @@ div.cell #emergencyContactRelation {
     width: 100%;
 }
 
+#backgroundInfo div .cell {
+    width: 70%;
+}
+
+#backgroundInfo label.error{
+
+}
 
