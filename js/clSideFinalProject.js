@@ -33,8 +33,8 @@ $(document).ready(function () {
 
     $("#tabs").tabs({
 
-        disabled: [0, 1, 2, 3, 4, 5, 6, 8],
-        active: 7,
+        disabled: [0, 1, 2, 3, 4, 5, 6, 7, 9],
+        active: 8,
         heightStyle: "fill"
 
     });
@@ -45,7 +45,7 @@ $(document).ready(function () {
 
         if ($("#appInfo").valid()) {
             $("#tabs").tabs({
-                disabled: [0, 2, 3, 4, 5, 6, 7, 8],
+                disabled: [0, 2, 3, 4, 5, 6, 7, 8, 9],
                 active: 1
             });
         }
@@ -81,7 +81,7 @@ $(document).ready(function () {
 
         if ($("#appCurrentAddress").valid() && $('#appPreviousAddress').valid()) {
             $("#tabs").tabs({
-                disabled: [0, 1, 3, 4, 5, 6, 7, 8],
+                disabled: [0, 1, 3, 4, 5, 6, 7, 8, 9],
                 active: 2
             });
         }
@@ -121,7 +121,7 @@ $(document).ready(function () {
     $("#appOccupantsSubmit").click(function () {
 
         $("#tabs").tabs({
-            disabled: [0, 1, 2, 4, 5, 6, 7, 8],
+            disabled: [0, 1, 2, 4, 5, 6, 7, 8, 9],
             active: 3
         });
 
@@ -157,7 +157,7 @@ $(document).ready(function () {
     $("#appPetsSubmit").click(function () {
 
         $("#tabs").tabs({
-            disabled: [0, 1, 2, 3, 5, 6, 7, 8],
+            disabled: [0, 1, 2, 3, 5, 6, 7, 8, 9],
             active: 4
         });
 
@@ -168,7 +168,7 @@ $(document).ready(function () {
 
         if ($('#appEmployment1').valid() && $('#appEmployment2').valid()) {
             $("#tabs").tabs({
-                disabled: [0, 1, 2, 3, 4, 6, 7, 8],
+                disabled: [0, 1, 2, 3, 4, 6, 7, 8, 9],
                 active: 5
             });
         }
@@ -180,7 +180,7 @@ $(document).ready(function () {
 
         if ($('#emergencyContact').valid()) {
             $("#tabs").tabs({
-                disabled: [0, 1, 2, 3, 4, 5, 7, 8],
+                disabled: [0, 1, 2, 3, 4, 5, 7, 8, 9],
                 active: 6
             });
         }
@@ -191,7 +191,7 @@ $(document).ready(function () {
 
         if ($('#references').valid()) {
             $("#tabs").tabs({
-                disabled: [0, 1, 2, 3, 4, 5, 6, 8],
+                disabled: [0, 1, 2, 3, 4, 5, 6, 8, 9],
                 active: 7
             });
         }
@@ -256,8 +256,21 @@ $(document).ready(function () {
 
         if ($('#backgroundInfo').valid()) {
             $("#tabs").tabs({
-                disabled: [0, 1, 2, 3, 4, 5, 6, 7],
+                disabled: [0, 1, 2, 3, 4, 5, 6, 7, 9],
                 active: 8
+            });
+        }
+    });
+
+
+
+    $("#appVehicleSubmit").button();
+    $("#appVehicleSubmit").click(function () {
+
+        if ($('#vehicleInfo').valid()) {
+            $("#tabs").tabs({
+                disabled: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+                active: 9
             });
         }
     });

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress ALL -->
 <html>
 <head>
     <link href="css/jquery-ui.css" rel="stylesheet"/>
@@ -19,6 +20,7 @@
         <li><a href="#emergencyContacts">Emergency Contacts</a></li>
         <li><a href="#personalReferences">References</a></li>
         <li><a href="#backgroundInformation">Background Info</a></li>
+        <li><a href="#vehicleInfo">Vehicle Info</a></li>
         <li><a href="#submit">Submit Application</a></li>
     </ul>
 
@@ -175,7 +177,6 @@
                 <br>
                 <input type="button" value="Submit" id="appAddressSubmit"/>
             </div>
-
         </div>
     </div>
 
@@ -405,7 +406,6 @@
                 <br>
                 <input type="button" value="Submit" id="appEmploymentSubmit"/>
             </div>
-
         </div>
     </div>
 
@@ -441,12 +441,14 @@
                                            type="text" title="Please enter the First Name."/>
                                 </div>
                                 <div class="cell">
-                                    <input id="emergencyContactAddress1" class="emergencyContactAddress" name="emergencyContactAddress1" type="text"
+                                    <input id="emergencyContactAddress1" class="emergencyContactAddress"
+                                           name="emergencyContactAddress1" type="text"
                                            title="Please enter the last name"/>
                                 </div>
                                 <div class="cell">
-                                    <input id="emergencyContactPhoneNumber1" class="phoneNumber" name="emergencyContactPhoneNumber1" type="text"
-                                         required title="Please enter a phone number"/>
+                                    <input id="emergencyContactPhoneNumber1" class="phoneNumber"
+                                           name="emergencyContactPhoneNumber1" type="text"
+                                           required title="Please enter a phone number"/>
                                 </div>
                                 <div class="cell">
                                     <select id="emergencyContactRelation1" name="emergencyContactRelation1" required
@@ -462,37 +464,39 @@
                             </div>
                             <div class="row">
                                 <br/>
-                            </div> <div class=" row ">
-                            <div class="cell">
-                                <input class="emergencyContactName2" name="emergencyContactName2"
-                                       id="emergencyContactFirstName2" required
-                                       type="text" title="Please enter the First Name."/>
                             </div>
-                            <div class="cell">
-                                <input id="emergencyContactAddress2" class="emergencyContactAddress" name="emergencyContactAddress2" type="text"
-                                        title="Please enter the last name"/>
+                            <div class=" row ">
+                                <div class="cell">
+                                    <input class="emergencyContactName2" name="emergencyContactName2"
+                                           id="emergencyContactFirstName2" required
+                                           type="text" title="Please enter the First Name."/>
+                                </div>
+                                <div class="cell">
+                                    <input id="emergencyContactAddress2" class="emergencyContactAddress"
+                                           name="emergencyContactAddress2" type="text"
+                                           title="Please enter the last name"/>
+                                </div>
+                                <div class="cell">
+                                    <input id="emergencyContactPhoneNumber2" class="phoneNumber"
+                                           name="emergencyContactPhoneNumber2" type="text"
+                                           required title="Please enter a phone number"/>
+                                </div>
+                                <div class="cell">
+                                    <select id="emergencyContactRelation2" name="emergencyContactRelation2" required
+                                            title="Please enter your Relationship">
+                                        <option value="Mother">Mother</option>
+                                        <option value="Father">Father</option>
+                                        <option value="Brother">Brother</option>
+                                        <option value="Sister">Sister</option>
+                                        <option value="Boyfriend">BoyFriend</option>
+                                        <option value="GirlFriend">GirlFriend</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="cell">
-                                <input id="emergencyContactPhoneNumber2" class="phoneNumber" name="emergencyContactPhoneNumber2" type="text"
-                                       required title="Please enter a phone number"/>
-                            </div>
-                            <div class="cell">
-                                <select id="emergencyContactRelation2" name="emergencyContactRelation2" required
-                                        title="Please enter your Relationship">
-                                    <option value="Mother">Mother</option>
-                                    <option value="Father">Father</option>
-                                    <option value="Brother">Brother</option>
-                                    <option value="Sister">Sister</option>
-                                    <option value="Boyfriend">BoyFriend</option>
-                                    <option value="GirlFriend">GirlFriend</option>
-                                </select>
-                            </div>
-                        </div>
                         </div>
                     </div>
                 </form>
             </div>
-
             <br>
             <input type="button" value="Submit" id="appEmerContactSubmit"/>
         </div>
@@ -530,12 +534,14 @@
                                            type="text" title="Please enter the First Name."/>
                                 </div>
                                 <div class="cell">
-                                    <input id="referenceAddress1" class="referenceAddress" name="referenceAddress1" type="text"
+                                    <input id="referenceAddress1" class="referenceAddress" name="referenceAddress1"
+                                           type="text"
                                            title="Please enter the last name"/>
                                 </div>
                                 <div class="cell">
-                                    <input id="referencePhoneNumber1" class="phoneNumber" name="referencePhoneNumber1" type="text"
-                                          required title="Please enter a phone number"/>
+                                    <input id="referencePhoneNumber1" class="phoneNumber" name="referencePhoneNumber1"
+                                           type="text"
+                                           required title="Please enter a phone number"/>
                                 </div>
                                 <div class="cell">
                                     <select id="referenceRelation1" name="referenceRelation1" required
@@ -551,32 +557,35 @@
                             </div>
                             <div class="row">
                                 <br/>
-                            </div> <div class=" row ">
-                            <div class="cell">
-                                <input class="referenceName2" name="referenceName2"
-                                       id="referenceFirstName2" required
-                                       type="text" title="Please enter the First Name."/>
                             </div>
-                            <div class="cell">
-                                <input id="referenceAddress2" class="referenceAddress" name="referenceAddress2" type="text"
-                                       title="Please enter the last name"/>
+                            <div class=" row ">
+                                <div class="cell">
+                                    <input class="referenceName2" name="referenceName2"
+                                           id="referenceFirstName2" required
+                                           type="text" title="Please enter the First Name."/>
+                                </div>
+                                <div class="cell">
+                                    <input id="referenceAddress2" class="referenceAddress" name="referenceAddress2"
+                                           type="text"
+                                           title="Please enter the last name"/>
+                                </div>
+                                <div class="cell">
+                                    <input id="referencePhoneNumber2" class="phoneNumber" name="referencePhoneNumber2"
+                                           type="text"
+                                           required title="Please enter a phone number"/>
+                                </div>
+                                <div class="cell">
+                                    <select id="referenceRelation2" name="referenceRelation2" required
+                                            title="Please enter your Relationship">
+                                        <option value="Mother">Mother</option>
+                                        <option value="Father">Father</option>
+                                        <option value="Brother">Brother</option>
+                                        <option value="Sister">Sister</option>
+                                        <option value="Boyfriend">BoyFriend</option>
+                                        <option value="GirlFriend">GirlFriend</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="cell">
-                                <input id="referencePhoneNumber2" class="phoneNumber" name="referencePhoneNumber2" type="text"
-                                      required title="Please enter a phone number"/>
-                            </div>
-                            <div class="cell">
-                                <select id="referenceRelation2" name="referenceRelation2" required
-                                        title="Please enter your Relationship">
-                                    <option value="Mother">Mother</option>
-                                    <option value="Father">Father</option>
-                                    <option value="Brother">Brother</option>
-                                    <option value="Sister">Sister</option>
-                                    <option value="Boyfriend">BoyFriend</option>
-                                    <option value="GirlFriend">GirlFriend</option>
-                                </select>
-                            </div>
-                        </div>
                         </div>
                     </div>
                 </form>
@@ -648,6 +657,134 @@
             <input type="button" value="Submit" id="appBackgroundSubmit"/>
         </div>
     </div>
+
+    <div id="vehicleInfo">
+        <div id="vehicleForms" class="table">
+            <div class="row">
+                <h2>Vehicle Information</h2>
+            </div>
+            <div class="row appForm">
+                <form id="vehicles" class="appForm table">
+                    <div class="table">
+                        <div id="vehicleHeaders" class="row first">
+                            <div class="cell">
+                                <p>Make</p>
+                            </div>
+                            <div class="cell">
+                                <p>Model</p>
+                            </div>
+                            <div class="cell phoneNumber">
+                                <p>Year</p>
+                            </div>
+                            <div class="cell">
+                                <p>License No.</p>
+                            </div>
+                            <div class="cell">
+                                <p>State</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="vehicleDiv1">
+                        <div id="vehicleFields" class="table">
+                            <div class=" row ">
+                                <div class="cell">
+                                    <select class="vehicleMake1" name="vehicleMake1"
+                                            id="vehicleMake1" required title="Please select a Make">
+                                        <option value="Nissan">Nissan</option>
+                                        <option value="Ford">Ford</option>
+                                        <option value="Chevrolet">Chevrolet</option>
+                                        <option value="Dodge">Dodge</option>
+                                        <option value="Acura">Acura</option>
+                                        <option value="BMW">BMW</option>
+                                    </select>
+                                </div>
+                                <div class="cell">
+                                    <input id="vehicleMode1" class="vehicleMode1" name="vehicleMode1" type="text"
+                                           title="Please enter a Model"/>
+                                </div>
+                                <div class="cell">
+                                    <select id="vehicleYear1" class="vehicleYear1" name="vehicleYear1"
+                                            required title="Please select a Year">
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                    </select>
+                                </div>
+                                <div class="cell">
+                                    <input id="vehicleLicenseNo1" class="vehicleLicenseNo1"
+                                           name="vehicleLicenseNo1" type="text" required
+                                           title="Please enter the License No.">
+                                </div>
+                                <div class="cell">
+                                    <select id="state1" name="state"
+                                            title="Please select a state">
+                                        <option value="Iowa">IA</option>
+                                        <option value="California">CA</option>
+                                        <option value="Florida">FL</option>
+                                        <option value="Illinois">IL</option>
+                                        <option value="Indiana">IN</option>
+                                        <option value="New York">NY</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <br/>
+                            </div>
+                            <div class=" row ">
+                                <div class="cell">
+                                    <select class="vehicleMake2" name="vehicleMake2"
+                                            id="vehicleMake2" title="Please select a Make">
+                                        <option value="Nissan">Nissan</option>
+                                        <option value="Ford">Ford</option>
+                                        <option value="Chevrolet">Chevrolet</option>
+                                        <option value="Dodge">Dodge</option>
+                                        <option value="Acura">Acura</option>
+                                        <option value="BMW">BMW</option>
+                                    </select>
+                                </div>
+                                <div class="cell">
+                                    <input id="vehicleModel2" class="vehicleModel2" name="vehicleModel2" type="text"
+                                           title="Please enter a Model"/>
+                                </div>
+                                <div class="cell">
+                                    <select id="vehicleYear2" class="vehicleYear2" name="vehicleYear2"
+                                            required title="Please select a Year">
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                    </select>
+                                </div>
+                                <div class="cell">
+                                    <input type="text" id="vehicleLicenseNo2" class="vehicleLicenseNo2"
+                                           name="vehicleLicenseNo2"
+                                           title="Please enter the License No.">
+                                </div>
+                                <div class="cell">
+                                    <select id="state" name="state"
+                                            title="Please select a state">
+                                        <option value="Iowa">IA</option>
+                                        <option value="California">CA</option>
+                                        <option value="Florida">FL</option>
+                                        <option value="Illinois">IL</option>
+                                        <option value="Indiana">IN</option>
+                                        <option value="New York">NY</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <br>
+            <input type="button" value="Submit" id="appVehicleSubmit"/>
+        </div>
+    </div>
+
 
     <div id="submit">
         test form 5
